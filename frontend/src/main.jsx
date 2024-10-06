@@ -14,7 +14,8 @@ import ReactDOM from 'react-dom/client'
 
 //RESTRICTED
 import Home from './component/pages/Home.jsx'
-
+import Login from './component/pages/Auth/Login.jsx';
+import Register from './component/pages/Auth/Register.jsx'
 
 
 
@@ -22,6 +23,8 @@ const router =createBrowserRouter(
   createRoutesFromElements(
     <Route auth='/' element={<App/>}  >
      <Route index={true} path='/' element={<Home/>}/>
+     <Route path='/login' element={<Login/>}/>
+     <Route path='/register' element={<Register/>}/>
     </Route>
   )
 )
