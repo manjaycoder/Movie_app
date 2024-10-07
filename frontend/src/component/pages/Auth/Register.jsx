@@ -16,6 +16,7 @@ const Register = () => {
   const navigate = useNavigate();
   const [register, { isLoading }] = useRegisterMutation();
   const { userInfo } = useSelector((state) => state.auth);
+  
   const { search } = useLocation();
   const sp = new URLSearchParams(search);
   const redirect = sp.get("redirect") || "/";
@@ -43,12 +44,7 @@ const Register = () => {
   return (
     <div className="pl-[2rem] flex flex-wrap">
       <div className="mr-[4rem] mt-[4rem] ">
-        <style>
-          background: rgba(255, 255, 255, 0.04); border-radius: 16px;
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter:
-          blur(3.4px); -webkit-backdrop-filter: blur(3.4px); border: 1px solid
-          rgba(255, 255, 255, 0.35);
-        </style>
+      
         <h1 className="text-2xl font-semibold mb-4 "> register</h1>
 
         <form onSubmit={submitHandler} className="container w-[40rem] ">
@@ -139,10 +135,19 @@ const Register = () => {
           </p>
         </div>
       </div>
-      <img
-        src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGhlYXRyZXxlbnwwfHwwfHx8MA%3D%3D"
-        className="h-[40rem] w-[40%] xl:block md:midden sm:hidden rounded "
-      />
+     
+      <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZW1wdHklMjB0aGVhdGVyfGVufDB8fDB8fHww"  className="h-[40rem] w-[43%] 
+   mr-[12px]  brightness-125 xl:block md:midden sm:hidden rounded-lg" />
+     
+    
+
+      
+
+
+
+
+
+
     </div>
   );
 };

@@ -5,9 +5,9 @@ import { Provider } from 'react-redux'
 import {Route,RouterProvider,createRoutesFromElements} from 'react-router'
 import {createBrowserRouter} from 'react-router-dom'
 import ReactDOM from 'react-dom/client'
-
+import PrivateRoute from './component/pages/Auth/PrivateRoute.jsx'
 ///auth
-
+import Profile from './component/pages/User/Profile.jsx'
 
 
 
@@ -25,6 +25,9 @@ const router =createBrowserRouter(
      <Route index={true} path='/' element={<Home/>}/>
      <Route path='/login' element={<Login/>}/>
      <Route path='/register' element={<Register/>}/>
+     <Route path='' element={<PrivateRoute/>}>
+     <Route path='/profile' element={<Profile/>}/>
+     </Route>
     </Route>
   )
 )

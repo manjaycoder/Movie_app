@@ -6,8 +6,11 @@ export default {
   ],
 
   theme: {
-    extend: {},
-  },
-  plugins: [],
+    extend: { backgroundImage: {
+      'hero-pattern': "url('/assets/demo.webp')",
+      'footer-texture': "url('/img/footer-texture.png')",
+    }
+  }
+  }
 }
 
